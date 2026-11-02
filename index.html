@@ -1,106 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Chaos</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#130820">
+  <meta name="description" content="Happy Chaos — cute ideas, questionable decisions. Weird little internet projects, bots, games, and creative experiments.">
+  <title>Happy Chaos — Cute Ideas. Questionable Decisions.</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="background-glow"></div>
+  <a class="skip-link" href="#projects">Skip to projects</a>
 
-<header class="hero">
-  <div class="hero-card">
-    <div class="tail-wrap">
-      <div class="tail"></div>
-      <div class="tail-tip"></div>
-    </div>
+  <!-- The full original illustration is used here to keep the design EXACT. -->
+  <header class="hero" id="home">
+    <div class="hero-art">
+      <img
+        src="happy-chaos-hero.png"
+        alt=""
+        width="1610"
+        height="977"
+        fetchpriority="high"
+      >
 
-    <div class="snackling-wrap">
-      <div class="nom-label">NOM<br>NOM</div>
-
-      <div class="crumb crumb-1"></div>
-      <div class="crumb crumb-2"></div>
-      <div class="crumb crumb-3"></div>
-
-      <div class="snackling">
-        <div class="ear left"></div>
-        <div class="ear right"></div>
-        <div class="head">
-          <div class="paw left"></div>
-          <div class="paw right"></div>
-
-          <div class="eye left"></div>
-          <div class="eye right"></div>
-
-          <div class="blush left"></div>
-          <div class="blush right"></div>
-
-          <div class="nose"></div>
-          <div class="mouth"></div>
-          <div class="fang left"></div>
-          <div class="fang right"></div>
-
-          <div class="antenna left"><span></span></div>
-          <div class="antenna right"><span></span></div>
-        </div>
+      <!-- Search engines and screen readers still get the real written content. -->
+      <div class="sr-only">
+        <p>Cute ideas. Questionable decisions.</p>
+        <h1>Happy Chaos</h1>
+        <p>A home for beautifully unhinged projects, chaotic experiments, bots, games, and whatever else gets created at 2 AM.</p>
       </div>
+
+      <!-- Transparent real links positioned directly over the drawn buttons. -->
+      <a class="art-link art-link-projects" href="#projects" aria-label="See Projects" title="See Projects"></a>
+      <a class="art-link art-link-snacklings" href="https://snacklings.food" aria-label="Visit Snacklings" title="Visit Snacklings"></a>
     </div>
 
-    <div class="hero-content">
-      <p class="tag">Cute ideas. Questionable decisions.</p>
-      <h1>Happy Chaos</h1>
-      <p class="subtitle">
-        A home for beautifully unhinged projects, chaotic experiments,
-        bots, games, and whatever else gets created at 2 AM.
-      </p>
-
-      <div class="buttons">
-        <a href="#projects" class="btn primary">See Projects</a>
-        <a href="https://snacklings.food" class="btn secondary">Visit Snacklings</a>
-      </div>
-    </div>
-  </div>
-</header>
+    <!-- Easy-to-tap buttons on small screens, where the illustration scales down. -->
+    <nav class="mobile-links" aria-label="Happy Chaos links">
+      <a class="btn primary" href="#projects">See Projects</a>
+      <a class="btn secondary" href="https://snacklings.food">Visit Snacklings</a>
+    </nav>
+  </header>
 
   <main>
     <section id="projects" class="section">
+      <p class="eyebrow">THINGS WE'VE UNLEASHED</p>
       <h2>Projects</h2>
       <div class="cards">
-        <div class="card">
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">🍜</span>
           <h3>Snacklings</h3>
-          <p>
-            Cute, cursed little snack creatures with chaotic energy and collectible charm.
-          </p>
-        </div>
-
-        <div class="card">
+          <p>Cute, cursed little snack creatures with chaotic energy and collectible charm.</p>
+          <a href="https://snacklings.food">Explore Snacklings <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">🌙</span>
           <h3>Nightling House</h3>
-          <p>
-            A dark, customizable social platform concept for chaotic adults who miss the old internet.
-          </p>
-        </div>
-
-        <div class="card">
+          <p>A dark, customizable social platform concept for chaotic adults who miss the old internet.</p>
+          <span class="card-note">In the works</span>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">🤖</span>
           <h3>Discord Bots</h3>
-          <p>
-            Weird, funny, useful, and unhinged bots made for communities, games, and nonsense.
-          </p>
-        </div>
+          <p>Weird, funny, useful, and unhinged bots made for communities, games, and nonsense.</p>
+          <span class="card-note">More chaos incoming</span>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <h2>About</h2>
-      <p class="about-text">
-        Happy Chaos is the umbrella for creative projects, experimental builds,
-        weird little internet ideas, and code that somehow works despite the vibes.
-      </p>
+    <section class="section about-section" id="about">
+      <p class="eyebrow">A LITTLE ABOUT US</p>
+      <h2>About Happy Chaos</h2>
+      <p class="about-text">Happy Chaos is home to creative projects, experimental builds, weird little internet ideas, and code that somehow works despite the vibes.</p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Happy Chaos</p>
+    <span>© 2026 Happy Chaos</span>
+    <span>Cute ideas. Questionable decisions.</span>
   </footer>
 </body>
 </html>
