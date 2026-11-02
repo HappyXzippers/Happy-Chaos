@@ -47,6 +47,150 @@ body {
   max-width: 800px;
 }
 
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-card {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 4rem 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(210, 150, 255, 0.22);
+  box-shadow:
+    0 0 30px rgba(155, 80, 255, 0.18),
+    inset 0 0 25px rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  overflow: visible;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* little bite marks to make it look eaten like a cookie */
+.bite {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: #07040d;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.bite-1 {
+  top: 26px;
+  right: 86px;
+}
+
+.bite-2 {
+  top: 54px;
+  right: 42px;
+}
+
+.bite-3 {
+  top: 96px;
+  right: 74px;
+}
+
+/* snackling */
+.snackling-corner {
+  position: absolute;
+  top: -30px;
+  right: -18px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(12deg);
+}
+
+.snackling-body {
+  position: relative;
+  width: 95px;
+  height: 95px;
+  border-radius: 35% 45% 40% 50%;
+  background: linear-gradient(145deg, #8c52ff, #ff7ccc);
+  box-shadow:
+    0 0 18px rgba(255, 120, 204, 0.35),
+    0 0 30px rgba(140, 82, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.snackling-eye {
+  position: absolute;
+  top: 32px;
+  width: 10px;
+  height: 14px;
+  background: #13071d;
+  border-radius: 50%;
+}
+
+.snackling-eye.left {
+  left: 28px;
+}
+
+.snackling-eye.right {
+  right: 28px;
+}
+
+.snackling-mouth {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  width: 22px;
+  height: 12px;
+  transform: translateX(-50%);
+  border-bottom: 4px solid #13071d;
+  border-radius: 0 0 20px 20px;
+}
+
+.nom-text {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #ffb3df;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(255, 125, 200, 0.45);
+}
+
+/* improve card spacing on smaller screens */
+@media (max-width: 640px) {
+  .hero-card {
+    padding: 3.2rem 1.2rem 2.4rem;
+    border-radius: 22px;
+  }
+
+  .snackling-corner {
+    top: -22px;
+    right: -10px;
+    transform: scale(0.85) rotate(12deg);
+  }
+
+  .bite-1 {
+    top: 18px;
+    right: 62px;
+  }
+
+  .bite-2 {
+    top: 42px;
+    right: 24px;
+  }
+
+  .bite-3 {
+    top: 78px;
+    right: 52px;
+  }
+}
+
 .tag {
   color: #ff9ad5;
   font-size: 0.95rem;
