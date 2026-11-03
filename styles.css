@@ -478,3 +478,80 @@ h2 em { font-style: normal; color: #ff9bd9; }
   html { scroll-behavior: auto; }
   .project-tile, .project-link { transition: none; }
 }
+
+/* ===========================================================
+   EQUINOXRP SPOTLIGHT — SOFT BLUE / ORANGE AMBIENT GLOW
+   Applies only to the EquinoxRP spotlight. No HTML edits needed.
+   =========================================================== */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+  border-color: rgba(109, 179, 255, .6);
+  box-shadow:
+    0 18px 65px rgba(0, 0, 0, .28),
+    -8px 0 32px rgba(54, 146, 255, .17),
+    8px 0 36px rgba(255, 133, 55, .12),
+    0 0 54px rgba(137, 97, 234, .1);
+  animation: equinox-ambient-glow 6s ease-in-out infinite;
+}
+
+/* Thin neon border, transitioning from electric blue to sunset orange. */
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: linear-gradient(105deg,
+    rgba(83, 179, 255, .95) 0%,
+    rgba(108, 154, 255, .65) 30%,
+    rgba(174, 125, 255, .48) 53%,
+    rgba(255, 155, 86, .74) 78%,
+    rgba(255, 166, 82, .98) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes equinox-ambient-glow {
+  0%, 100% {
+    box-shadow:
+      0 18px 65px rgba(0, 0, 0, .28),
+      -8px 0 32px rgba(54, 146, 255, .17),
+      8px 0 36px rgba(255, 133, 55, .12),
+      0 0 54px rgba(137, 97, 234, .1);
+  }
+  50% {
+    box-shadow:
+      0 18px 65px rgba(0, 0, 0, .3),
+      -10px 0 48px rgba(54, 146, 255, .32),
+      10px 0 48px rgba(255, 133, 55, .24),
+      0 0 70px rgba(137, 97, 234, .15);
+  }
+}
+
+/* A complementary, slightly brighter glow on the Discord button. */
+.spotlight-button {
+  box-shadow:
+    0 10px 28px rgba(65, 92, 192, .28),
+    -3px 0 18px rgba(84, 142, 255, .15),
+    3px 0 18px rgba(255, 136, 60, .12);
+  transition: transform .22s ease, filter .22s ease, box-shadow .22s ease;
+}
+.spotlight-button:hover,
+.spotlight-button:focus-visible {
+  box-shadow:
+    0 13px 33px rgba(65, 92, 192, .33),
+    -3px 0 28px rgba(84, 142, 255, .33),
+    3px 0 28px rgba(255, 136, 60, .28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spotlight-card { animation: none; }
+  .spotlight-button { transition: none; }
+}
