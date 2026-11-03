@@ -3,80 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#130820">
-  <meta name="description" content="Happy Chaos — cute ideas, questionable decisions. Weird little internet projects, bots, games, and creative experiments.">
-  <title>Happy Chaos — Cute Ideas. Questionable Decisions.</title>
+  <meta name="theme-color" content="#10061c">
+  <meta name="description" content="Happy Chaos — cute ideas, questionable decisions. Games, bots, and beautifully unhinged internet projects.">
+  <title>Happy Chaos — Cute ideas. Questionable decisions.</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#projects">Skip to projects</a>
 
-  <!-- The full original illustration is used here to keep the design EXACT. -->
+  <!-- Original Happy Chaos illustration, completely intact. -->
   <header class="hero" id="home">
     <div class="hero-art">
-      <img
-        src="happy-chaos-hero.png"
-        alt=""
-        width="1610"
-        height="977"
-        fetchpriority="high"
-      >
-
-      <!-- Search engines and screen readers still get the real written content. -->
+      <img src="happy-chaos-hero.png" alt="" width="1610" height="977" fetchpriority="high">
       <div class="sr-only">
-        <p>Cute ideas. Questionable decisions.</p>
         <h1>Happy Chaos</h1>
-        <p>A home for beautifully unhinged projects, chaotic experiments, bots, games, and whatever else gets created at 2 AM.</p>
+        <p>Cute ideas. Questionable decisions. A home for beautifully unhinged projects, chaotic experiments, bots, games, and whatever else gets created at 2 AM.</p>
       </div>
-
-      <!-- Transparent real links positioned directly over the drawn buttons. -->
       <a class="art-link art-link-projects" href="#projects" aria-label="See Projects" title="See Projects"></a>
       <a class="art-link art-link-snacklings" href="https://snacklings.food" aria-label="Visit Snacklings" title="Visit Snacklings"></a>
     </div>
-
-    <!-- Easy-to-tap buttons on small screens, where the illustration scales down. -->
-    <nav class="mobile-links" aria-label="Happy Chaos links">
+    <nav class="mobile-links" aria-label="Happy Chaos quick links">
       <a class="btn primary" href="#projects">See Projects</a>
       <a class="btn secondary" href="https://snacklings.food">Visit Snacklings</a>
     </nav>
   </header>
 
   <main>
-    <section id="projects" class="section">
-      <p class="eyebrow">THINGS WE'VE UNLEASHED</p>
-      <h2>Projects</h2>
-      <div class="cards">
-        <article class="card">
-          <span class="card-icon" aria-hidden="true">🍜</span>
-          <h3>Snacklings</h3>
-          <p>Cute, cursed little snack creatures with chaotic energy and collectible charm.</p>
-          <a href="https://snacklings.food">Explore Snacklings <span aria-hidden="true">→</span></a>
+    <section class="projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow"><span class="sparkle" aria-hidden="true">✦</span> INVENTORY OF BAD IDEAS</p>
+          <h2 id="projects-heading">The Chaos <em>Collection</em></h2>
+          <p class="section-subtitle">Some projects are adorable. Some are questionable. All of them escaped containment.</p>
+        </div>
+        <span class="collection-stamp" aria-label="Three featured projects"><span class="stamp-star" aria-hidden="true">✳</span> 03 CREATIONS</span>
+      </div>
+
+      <div class="project-grid">
+        <!-- FEATURED: Snacklings -->
+        <article class="project-tile project-tile-snacklings">
+          <div class="project-art snacklings-art" aria-hidden="true">
+            <span class="float-rarity rarity-one">COMMON-ish</span>
+            <span class="float-rarity rarity-two">100% CURSED</span>
+            <span class="snack-spark snack-spark-one">✳</span>
+            <span class="snack-spark snack-spark-two">✦</span>
+            <span class="snack-spark snack-spark-three">✧</span>
+            <span class="snack-emblem">S<span class="snack-emblem-glow"></span></span>
+            <span class="art-caption">TINY CREATURES · BIG PROBLEMS</span>
+          </div>
+          <div class="project-info">
+            <div class="project-overline">
+              <span class="project-index">01 / GAME WORLD</span>
+              <span class="project-status"><span class="status-dot"></span> WEBSITE LIVE</span>
+            </div>
+            <h3>Snacklings<span class="title-pink">.</span></h3>
+            <p>Collectible little food gremlins. Equal parts adorable, cursed, and in need of adult supervision.</p>
+            <a class="project-link" href="https://snacklings.food">Enter the Snack Pit <span aria-hidden="true">↗</span></a>
+          </div>
         </article>
-        <article class="card">
-          <span class="card-icon" aria-hidden="true">🌙</span>
-          <h3>Nightling House</h3>
-          <p>A dark, customizable social platform concept for chaotic adults who miss the old internet.</p>
-          <span class="card-note">In the works</span>
+
+        <!-- Nightling House -->
+        <article class="project-tile project-tile-nightling">
+          <div class="side-art nightling-art" aria-hidden="true">
+            <span class="moon-shape"></span>
+            <span class="moon-star star-one">✦</span>
+            <span class="moon-star star-two">✧</span>
+            <span class="moon-star star-three">✧</span>
+          </div>
+          <div class="project-info">
+            <div class="project-overline"><span class="project-index">02 / SOCIAL EXPERIMENT</span><span class="project-status status-soon">IN THE WORKS</span></div>
+            <h3>Nightling House<span class="title-pink">.</span></h3>
+            <p>A home for the beautifully strange. Custom profiles, chaotic connections, and the internet we miss.</p>
+            <span class="project-footer-note">DOORS OPENING... EVENTUALLY <span aria-hidden="true">✦</span></span>
+          </div>
         </article>
-        <article class="card">
-          <span class="card-icon" aria-hidden="true">🤖</span>
-          <h3>Discord Bots</h3>
-          <p>Weird, funny, useful, and unhinged bots made for communities, games, and nonsense.</p>
-          <span class="card-note">More chaos incoming</span>
+
+        <!-- Discord bots -->
+        <article class="project-tile project-tile-bots">
+          <div class="side-art bot-art" aria-hidden="true">
+            <div class="terminal-graphic">
+              <div class="terminal-dots"><i></i><i></i><i></i><span>happy-chaos.exe</span></div>
+              <div class="terminal-code"><span class="prompt">›</span> /vibecheck <span class="cursor">_</span></div>
+              <div class="terminal-answer">STATUS: CHAOTICALLY OPERATIONAL</div>
+            </div>
+            <span class="bot-star">✳</span>
+          </div>
+          <div class="project-info">
+            <div class="project-overline"><span class="project-index">03 / BOTS & MAYHEM</span><span class="project-status status-soon">ONGOING</span></div>
+            <h3>Discord Bots<span class="title-pink">.</span></h3>
+            <p>Little digital troublemakers with commands, personalities, and absolutely no indoor voice.</p>
+            <span class="project-footer-note">MORE MAYHEM COMING <span aria-hidden="true">✦</span></span>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section about-section" id="about">
-      <p class="eyebrow">A LITTLE ABOUT US</p>
-      <h2>About Happy Chaos</h2>
-      <p class="about-text">Happy Chaos is home to creative projects, experimental builds, weird little internet ideas, and code that somehow works despite the vibes.</p>
+
+    <!-- Community spotlight: this is a community we're promoting, not one of our own apps. -->
+    <section class="community-section" id="equinoxrp" aria-label="EquinoxRP community spotlight">
+      <a class="community-feature" href="https://discord.gg/hGkXNxnP4h" target="_blank" rel="noopener noreferrer" aria-label="Join the EquinoxRP Discord (opens in a new tab)">
+        <div class="community-art" aria-hidden="true">
+          <span class="city-moon"></span>
+          <span class="city-star city-star-a">✦</span>
+          <span class="city-star city-star-b">✧</span>
+          <span class="city-star city-star-c">✧</span>
+          <div class="cityscape">
+            <span class="building building-one"></span>
+            <span class="building building-two"></span>
+            <span class="building building-three"></span>
+            <span class="building building-four"></span>
+            <span class="building building-five"></span>
+          </div>
+          <div class="community-art-title">EQUINOX<span>RP</span></div>
+          <span class="community-art-subtitle">YOUR NEXT STORY STARTS HERE</span>
+          <span class="community-road"></span>
+        </div>
+        <div class="community-copy">
+          <p class="eyebrow"><span aria-hidden="true">✦</span> COMMUNITY SPOTLIGHT · FIVEM</p>
+          <h2>Find your next story at <em>EquinoxRP.</em></h2>
+          <p class="community-description">Serious roleplay with room for ridiculous moments. Custom cars, gangs and crime, police &amp; EMS, player-owned businesses, and events to shake things up.</p>
+          <div class="community-tags" aria-hidden="true">
+            <span>✦ Beginner-friendly</span>
+            <span>✦ Serious RP + fun</span>
+            <span>✦ Community events</span>
+          </div>
+          <span class="community-join">Join the EquinoxRP Discord <span aria-hidden="true">↗</span></span>
+          <span class="community-hint">Click anywhere on this spotlight to open their Discord invite.</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <span class="about-star" aria-hidden="true">✦</span>
+      <p class="eyebrow">THE MIND BEHIND THE MAYHEM</p>
+      <h2 id="about-heading">Made with love, caffeine, and <em>questionable decisions.</em></h2>
+      <p>Happy Chaos is home to games, bots, strange little ideas, and experiments that somehow turn into real websites. Cute things with a chaotic streak live here.</p>
     </section>
   </main>
 
   <footer class="footer">
     <span>© 2026 Happy Chaos</span>
-    <span>Cute ideas. Questionable decisions.</span>
+    <span>Made of pixels & poor impulse control <span aria-hidden="true">✦</span></span>
+    <a href="#home">Back to top ↑</a>
   </footer>
 </body>
 </html>
