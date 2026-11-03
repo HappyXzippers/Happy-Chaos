@@ -456,3 +456,117 @@ h2 em { font-style: normal; color: #ff9bd9; }
   html { scroll-behavior: auto; }
   .project-tile, .project-link { transition: none; }
 }
+.spotlight-section {
+  padding-top: 2rem;
+}
+
+.spotlight-card {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  border: 1px solid rgba(199, 131, 255, 0.25);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(34, 16, 52, 0.9), rgba(15, 8, 24, 0.92));
+  box-shadow:
+    0 0 28px rgba(160, 85, 255, 0.08),
+    inset 0 0 30px rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+
+.spotlight-left {
+  padding: 2.4rem 2.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spotlight-left h2 {
+  margin-bottom: 1rem;
+}
+
+.spotlight-text {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1.02rem;
+  max-width: 560px;
+}
+
+.spotlight-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.7rem;
+}
+
+.spotlight-tags span {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f8ecff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 139, 212, 0.28);
+  box-shadow: 0 0 10px rgba(180, 90, 255, 0.08);
+}
+
+.spotlight-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 50px;
+  padding: 0.95rem 1.25rem;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #6da7ff 0%, #8a63ff 50%, #ff8a3d 100%);
+  box-shadow: 0 0 22px rgba(141, 111, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spotlight-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(141, 111, 255, 0.38);
+}
+
+.spotlight-right {
+  position: relative;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(60, 120, 255, 0.18), transparent 35%),
+    radial-gradient(circle at 80% 25%, rgba(255, 150, 70, 0.18), transparent 30%),
+    #12091d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.spotlight-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 100%;
+}
+
+@media (max-width: 900px) {
+  .spotlight-card {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-left {
+    padding: 2rem 1.4rem 1.3rem;
+  }
+
+  .spotlight-right {
+    min-height: 280px;
+  }
+
+  .spotlight-image {
+    min-height: 280px;
+  }
+}
